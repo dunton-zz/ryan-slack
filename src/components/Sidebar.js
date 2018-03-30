@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Chat from './Chat'
+import Chat from '../containers/Chat'
 
 class SideBar extends Component {
 	constructor(props) {
