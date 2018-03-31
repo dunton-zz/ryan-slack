@@ -8,7 +8,7 @@ import reducers from './reducers';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import promise from 'redux-promise';
-import InitialState from './initial_state';
+import initial_state from './initial_state';
 
 //const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
@@ -28,12 +28,12 @@ function logger({ getState }) {
 }
 
 
-const store = createStore(reducers, InitialState,
+const store = createStore(reducers, initial_state,
   applyMiddleware(logger));
 
 store.dispatch({
 	type: 'INIT_STATE',
-	first: InitialState
+	users: initial_state
 });
  
 

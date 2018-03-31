@@ -11,7 +11,7 @@ class Chat extends Component {
 
 	onClickHandler(e) {
 		// call action creator
-		this.props.clickOnUser(e);
+		clickOnUser(e);
 	}
 
 	render() {
@@ -21,9 +21,4 @@ class Chat extends Component {
 	}
 }
 
-function mapStateToProps(state) {
-	return { active: state.active };
-}
-
-
-export default connect(mapStateToProps, { clickOnUser })(Chat);
+export default Chat;
